@@ -6,7 +6,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 from geopy.distance import geodesic
 
-# Coordinates for some European capitals
+
 cities_coordinates = {
     'Paris': (48.8566, 2.3522),
     'Berlin': (52.5200, 13.4050),
