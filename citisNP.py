@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from geopy.distance import geodesic
 
-# Coordinates for some European capitals
+
 cities_coordinates = {
     'Paris': (48.8566, 2.3522),
     'Berlin': (52.5200, 13.4050),
@@ -45,7 +45,7 @@ def held_karp_tsp(G):
                             dp[new_mask][v] = dp[mask][u] + weight
                             parent[new_mask][v] = u
 
-    # Find the minimum cost to return to the start node
+
     mask = (1 << n) - 1
     min_cost = float('inf')
     last_node = -1
@@ -55,7 +55,7 @@ def held_karp_tsp(G):
             min_cost = cost
             last_node = u
 
-    # Reconstruct the path
+   
     path = []
     node = last_node
     while node != -1:
